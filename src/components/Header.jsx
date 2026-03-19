@@ -1,26 +1,31 @@
-function Header({ cambiarVista }) {
+import { NavLink, Link } from "react-router-dom"; // Link y NavLink permiten navegar sin recargar la página
+
+function Header() {
   return (
     <header className="header">
       <div className="header-container">
-        <h1 onClick={() => cambiarVista("Home")}>
-          XtraCine
-        </h1>
+        {/* Link simple al inicio, no nos interesa el estado activo aquí */}
+        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <h1>XtraCine</h1>
+        </Link>
 
+        {/* Usamos NavLink para el menú. Este automáticamente le pone la clase "active" si estás en esa página */}
         <nav>
-          <span onClick={() => cambiarVista("Home")}>
+          <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
             Inicio
-          </span>
+          </NavLink>
 
-          <span onClick={() => cambiarVista("Cartelera")}>
+          <NavLink to="/cartelera" className={({ isActive }) => (isActive ? "active" : "")}>
             Cartelera
-          </span>
+          </NavLink>
 
-          <span onClick={() => cambiarVista("Snacks")}>
+          <NavLink to="/snacks" className={({ isActive }) => (isActive ? "active" : "")}>
             Alimentos
-          </span>
-          <span onClick={() => cambiarVista("Otros")}>
+          </NavLink>
+          
+          <NavLink to="/otros" className={({ isActive }) => (isActive ? "active" : "")}>
             Otros
-          </span>
+          </NavLink>
         </nav>
       </div>
     </header>

@@ -1,6 +1,27 @@
+import { useState } from "react"
 import FoodCard from "../components/FoodCard"
 
 function Snacks() {
+
+  // Estados del formulario
+  const [nombre, setNombre] = useState("")
+  const [correo, setCorreo] = useState("")
+  const [mensaje, setMensaje] = useState("")
+
+  function handleSubmit(e) {
+    e.preventDefault()
+
+    if (!nombre || !correo) {
+      setMensaje("Por favor completa todos los campos")
+      return
+    }
+
+    setMensaje(`Gracias ${nombre}, te registraste con el correo ${correo} 🎉`)
+
+    setNombre("")
+    setCorreo("")
+  }
+
   return (
     <main className="snacks-container">
 
@@ -44,6 +65,41 @@ function Snacks() {
           image="https://misgomitas.com/wp-content/uploads/2024/06/origen-de-las-gomitas-min-1.webp"
           price="55"
         />
+      </div>
+
+      {/* Formulario de promociones */}
+      <div style={{ textAlign: "center", marginTop: "50px" }}>
+        <h2>Regístrate para promociones!</h2>
+
+        <form onSubmit={handleSubmit}>
+
+          <input
+            type="text"
+            placeholder="Tu nombre"
+            value={nombre}
+            onChange={(e) => setNombre(e.target.value)}
+            style={{ marginRight: "10px" }}
+          />
+
+          <input
+            type="email"
+            placeholder="Tu correo"
+            value={correo}
+            onChange={(e) => setCorreo(e.target.value)}
+            style={{ marginRight: "10px" }}
+          />
+
+          <button type="submit">
+            Registrarse
+          </button>
+
+        </form>
+
+        {mensaje && (
+          <p style={{ marginTop: "20px", fontWeight: "bold" }}>
+            {mensaje}
+          </p>
+        )}
       </div>
 
     </main>

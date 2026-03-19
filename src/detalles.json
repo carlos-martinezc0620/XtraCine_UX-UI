@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "titulo": "Avatar: Fuego y Cenizas",
+    "imagen": "https://m.media-amazon.com/images/M/MV5BZDYxY2I1OGMtN2Y4MS00ZmU1LTgyNDAtODA0MzAyYjI0N2Y2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "sinopsis": "La nueva entrega de Avatar explora los conflictos entre clanes Na'vi y nuevas amenazas humanas."
+  },
+  {
+    "id": 2,
+    "titulo": "Ayuda",
+    "imagen": "https://m.media-amazon.com/images/M/MV5BOTgxOWY5NTMtYjdiNi00NTIyLTkwMTQtMWNjM2IzYTU0ODgyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "sinopsis": "Una historia intensa sobre decisiones difíciles y segundas oportunidades."
+  },
+  {
+    "id": 3,
+    "titulo": "Arco",
+    "imagen": "https://poluxweb.com/Polux3/images/data/cine/resenas/2026/febrero/Arco/Arco-01.jpg",
+    "sinopsis": "Una aventura fantástica que mezcla realidad y mundos alternos."
+  }
+]
