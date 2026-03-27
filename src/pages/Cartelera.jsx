@@ -2,21 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import MovieCard from "../components/MovieCard";
 
-// Exportamos esta lista para poder usarla en Detalle.js y buscar la película ahí
-export const peliculasCartelera = [
-  {
-    id: 101,
-    titulo: "Shingeki No Kyojin: The Final Season",
-    imagen: "https://m.media-amazon.com/images/M/MV5BMzVhOGMzYzQtNzgyMi00NjZmLWEzYjUtMjQ2NDE3Njk4MmRkXkEyXkFqcGc@._V1_.jpg",
-    descripcion: "La batalla final por la humanidad ha comenzado."
-  },
-  {
-    id: 102,
-    titulo: "Bob Esponja: Al rescate",
-    imagen: "https://m.media-amazon.com/images/M/MV5BNjAyZDQwOTktZjc0Yi00MzNjLWI1NmUtODI2ZjJmYWRjOTA3XkEyXkFqcGc@._V1_.jpg",
-    descripcion: "Bob Esponja y Patricio viven una nueva aventura submarina."
-  }
-];
+import { peliculasCartelera } from "../data/movies.js";
 
 function Cartelera({ agregarFavorito, favoritas }) {
 

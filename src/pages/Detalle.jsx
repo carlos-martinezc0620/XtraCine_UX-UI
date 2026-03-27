@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom" // Importamos useParams para leer la url
-import peliculasHome from "../detalles.json"
-import { peliculasCartelera } from "./Cartelera"
+import { peliculasHome, peliculasCartelera } from "../data/movies.js"
 
 // Vista de detalle de una película (Ruta dinámica)
 function Detalle() {

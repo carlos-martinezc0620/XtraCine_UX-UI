@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import MovieCard from "../components/MovieCard";
-import peliculas from "../detalles.json";
+import { peliculasHome as peliculas } from "../data/movies.js";
 
 function Home({ agregarFavorito }) {
 
